@@ -17,6 +17,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        one {
+            applicationId "com.example.one"
+            resValue "string", "string_flavor", "Flavor 1"
+            buildConfigField "String", "TITLE_FLAVOR", '"FLAVOR_ONE"'
+        }
+        two {
+            applicationId "com.example.two"
+            resValue "string", "string_flavor", "Flavor 2"
+            buildConfigField "String", "TITLE_FLAVOR", '"FLAVOR_TWO"'
+        }
+    }
 }
 
 dependencies {
